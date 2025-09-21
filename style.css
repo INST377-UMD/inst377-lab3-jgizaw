@@ -1,0 +1,111 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+  line-height: 1.5;
+}
+
+.banner {
+  text-align: center;
+  background: #111827;
+  color: #22d3ee;
+  padding: 24px 16px;
+  margin: 16px;
+  border: 1px solid #334155;
+  border-radius: 14px;
+}
+
+nav { margin: 0 16px 16px; }
+.nav {
+  list-style: none;
+  display: flex;
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+}
+.nav a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 14px;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  color: #e2e8f0;
+  background: #111827;
+  transition: transform 140ms ease, background-color 140ms ease, border-color 140ms ease;
+}
+.nav a:hover, .nav a:focus-visible {
+  transform: translateY(-2px);
+  background: #0b1220;
+  border-color: #475569;
+}
+
+.content-wrap {
+  display: flex;
+  gap: 16px;
+  margin: 0 16px 16px;
+}
+.main {
+  width: 70%;
+  background: #111827;
+  border: 1px solid #334155;
+  border-radius: 14px;
+  padding: 18px;
+}
+.sidebar {
+  width: 30%;
+  background: #172554;
+  border: 1px solid #334155;
+  border-radius: 14px;
+  padding: 18px;
+  transition: background-color 160ms ease;
+}
+.sidebar:hover { background: #1e3a8a; }
+
+@media (max-width: 720px) {
+  .main { width: 64%; }
+  .sidebar { width: 36%; }
+}
+@media (max-width: 560px) {
+  .content-wrap { flex-direction: column; }
+  .main, .sidebar { width: 100%; }
+}
+
+.rps-form {
+  display: grid;
+  gap: 10px;
+  max-width: 520px;
+}
+.rps-form input[type="text"],
+.rps-form select {
+  width: 60%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  background: #0b1220;
+  color: #e2e8f0;
+  outline: none;
+  transition: width 180ms ease;
+}
+.rps-form input[type="text"]:focus {
+  width: 90%;
+  border-color: #64748b;
+}
+.rps-form button {
+  justify-self: start;
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  background: #0b1220;
+  color: #e2e8f0;
+  cursor: pointer;
+  transition: transform 140ms ease, background-color 140ms ease, border-color 140ms ease;
+}
+.rps-form button:hover,
+.rps-form button:focus-visible {
+  transform: translateY(-1px);
+  background: #0c1729;
+  border-color: #475569;
+}
